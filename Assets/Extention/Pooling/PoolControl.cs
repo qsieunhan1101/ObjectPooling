@@ -27,6 +27,8 @@ public class PoolControl : MonoBehaviour
 
 
 }
+
+
 [System.Serializable]
 public class PoolAmount
 {

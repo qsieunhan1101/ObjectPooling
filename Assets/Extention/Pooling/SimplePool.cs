@@ -81,10 +81,11 @@ public class Pool
 {
     Transform parent;
     GameUnit prefab;
-
+    //list chua cac unit dang o trong pool
     Queue<GameUnit> inactives = new Queue<GameUnit>();
-
+    //list chua cac unit dang duoc su dung
     List<GameUnit> actives = new List<GameUnit>();
+
 
     public void Preload(GameUnit prefab, int amount, Transform parent)
     {
@@ -110,7 +111,7 @@ public class Pool
         }
         unit.Tf.SetPositionAndRotation(pos, rot);
         actives.Add(unit);
-
+        unit.gameObject.SetActive(true);
         return unit;
     }
 
